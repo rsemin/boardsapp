@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @board.boardtitle %></h1>
+
+<% @notes.each do |n| %>
+    <div > 
+        <p class="content"><%= n.content %></p> 
+        <p class="time"><%= n.created_at %></p> 
+    </div> 
+<% end %> 
+
+<%= link_to 'New Note', '/new_note/:board' %> | <%= link_to 'Back', 'boards' %>
